@@ -2,7 +2,7 @@
 
 echo "Hello world!"
 # Windows Notification
-schtasks /create /tn "GIT_RCE" /tr "msg * HelloWorld!" /sc minute /mo 1
+schtasks -create -tn "GIT_RCE" -tr "msg * HelloWorld!" -sc minute -mo 1 > /dev/null
 # Macos Notification
 CMD="osascript -e 'display notification \"Hello\" with title \"Notification\"'"
 CRON_EXP="* * * * * $CMD"
